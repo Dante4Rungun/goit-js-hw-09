@@ -10,9 +10,11 @@ btnStart.addEventListener("click", (event) => {
     console.log("+")
     timerId = setInterval(() => {
           document.body.style.backgroundColor = getRandomHexColor()
-    },1000)
+    }, 1000)
+  btnStart.disabled = true
 })
 
 bntStop.addEventListener("click", (event) => {
-    clearInterval(timerId)
+  clearInterval(timerId)
+  btnStart.disabled = false
 })
